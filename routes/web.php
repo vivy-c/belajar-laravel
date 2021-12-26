@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\GuruController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,6 +16,7 @@ use App\Http\Controllers\HomeController;
 
 Route::get('/', [HomeController::class,'index']);
 Route::get('/home/about/{id}', [HomeController::class,'about']);
+Route::get('/guru', [HomeController::class,'index']);
 
 Route::get('/guru', function () {
     return view('v_guru');
