@@ -14,5 +14,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('layout.v_template');
+    return view('v_home');
 });
+Route::get('/guru', function () {
+    return view('v_guru');
+});
+Route::get('/siswa', function () {
+    return view('v_siswa');
+});
+Route::get('/user', function () {
+    return view('v_user');
+});
+
+// Route::view('/guru'.'v_guru');
+// Route::view('/siswa'.'v_siswa');
+// Route::view('/user'.'v_user');
