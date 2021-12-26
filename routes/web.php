@@ -15,12 +15,12 @@ use App\Http\Controllers\GuruController;
 */
 
 Route::get('/', [HomeController::class,'index']);
-Route::get('/home/about/{id}', [HomeController::class,'about']);
-Route::get('/guru', [HomeController::class,'index']);
+// Route::get('/home/about/{id}', [HomeController::class,'about']);
+Route::get('/guru', [GuruController::class,'index']);
 
-Route::get('/guru', function () {
-    return view('v_guru');
-});
+// Route::get('/guru', function () {
+//     return view('v_guru');
+// });
 Route::get('/siswa', function () {
     return view('v_siswa');
 });
