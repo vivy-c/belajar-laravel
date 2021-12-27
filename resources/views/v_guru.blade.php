@@ -3,6 +3,15 @@
  
 @section('content')
 <a href="/guru/add" class="btn btn-primary btn-sm mb-3">Add</a><br>
+
+@if (session('pesan'))
+    <div class="alert alert-success alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <h5><i class="icon fas fa-check"></i> Success!</h5>
+        {{ session('pesan') }}
+    </div>
+@endif
+
     <table class="table table-bordered">
         <thead>
             <tr>

@@ -54,5 +54,20 @@ class GuruController extends Controller
             'nip_guru.min' => 'min 4 karakter',
             'nip_guru.max' => 'max 6 karakter',
         ]);
+
+        //upload gambar
+        $file = Request()->foto_guru;
+        $fileName = Request()->nip_guru.'.'. $file->extension();
+        $file->move(public_path('foto_guru'),$fileName);
+
+        $data = [
+            'nip_guru' => Request()->nip_guru,
+            'nama_guru' => Request()->nama_guru,
+            'mapel' => Request()->mapel,
+            'foto_guru' => $fileName,
+        ];
+
+        $this->GuruModel->addData($data);
+        return redirect()->route('guru')->with('pesan','Data Berhasil di Tambahkan');
     }
 }
