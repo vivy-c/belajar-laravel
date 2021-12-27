@@ -18,7 +18,7 @@
              @foreach ($guru as $data)
                  <tr>
                      <td>{{ $no++ }}</td>
-                     <td>{{ $data['nip'] }}</td>
+                     <td>{{ $data->nip }}</td>
                      <td>{{ $data-> nama_guru }}</td>
                      <td>{{ $data->mapel }}</td>
                      <td><img src="{{ url('foto_guru/'. $data->foto_guru) }}" width="100px"></td>
