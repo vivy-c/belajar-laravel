@@ -26,10 +26,18 @@ class GuruController extends Controller
 
     public function detail($id_guru)
     {
+        if (!$this->GuruModel->detailData($id_guru)) {
+            abort(404);
+        }
         $data = [
                 'guru' => $this->GuruModel->detailData($id_guru),
             ];
     
             return view('v_detailguru', $data);
+    }
+
+    public function add()
+    {
+        
     }
 }

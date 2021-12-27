@@ -19,15 +19,17 @@ Route::get('/', [HomeController::class,'index']);
 Route::get('/guru', [GuruController::class,'index']);
 Route::get('/guru/detail/{id_guru}', [GuruController::class,'detail']);
 
+Route::get('/guru/add', [GuruController::class,'add']);
+
 // Route::get('/guru', function () {
 //     return view('v_guru');
 // });
-Route::get('/siswa', function () {
-    return view('v_siswa');
-});
-Route::get('/user', function () {
-    return view('v_user');
-});
+// Route::get('/siswa', function () {
+//     return view('v_siswa');
+// });
+// Route::get('/user', function () {
+//     return view('v_user');
+// });
 
 // Route::view('/guru'.'v_guru');
 // Route::view('/siswa'.'v_siswa');
