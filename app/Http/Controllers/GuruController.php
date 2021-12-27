@@ -38,6 +38,21 @@ class GuruController extends Controller
 
     public function add()
     {
-        
+        return view('v_addguru');
+    }
+
+    public function insert()
+    {
+        Request()->validate([
+            'nip_guru' => 'required|unique:tbl_guru,nip|min:4|max:6',
+            'nama_guru' => 'required',
+            'mapel' => 'required',
+            'foto_guru' => 'required|mimes:jpg,jpeg,bmp,png|max:1024kb',
+        ],[
+            'nip_guru.required' => 'nip wajib diisi',
+            'nip_guru.unique' => 'nip sudah ada',
+            'nip_guru.min' => 'min 4 karakter',
+            'nip_guru.max' => 'max 6 karakter',
+        ]);
     }
 }

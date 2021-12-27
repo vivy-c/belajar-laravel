@@ -2,6 +2,7 @@
 @section('title','Guru')
  
 @section('content')
+<a href="/guru/add" class="btn btn-primary btn-sm mb-3">Add</a><br>
     <table class="table table-bordered">
         <thead>
             <tr>

@@ -18,4 +18,6 @@ class GuruModel extends Model
     {
         return DB::table('tbl_guru')->where('id_guru',$id_guru)->first();
     }
+
+    
 }
