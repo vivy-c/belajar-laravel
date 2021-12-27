@@ -17,6 +17,7 @@ use App\Http\Controllers\GuruController;
 Route::get('/', [HomeController::class,'index']);
 // Route::get('/home/about/{id}', [HomeController::class,'about']);
 Route::get('/guru', [GuruController::class,'index']);
+Route::get('/guru/detail/{id_guru}', [GuruController::class,'detail']);
 
 // Route::get('/guru', function () {
 //     return view('v_guru');
